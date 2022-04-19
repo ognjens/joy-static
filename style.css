@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+}
+
+.section {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 30px 15px;
+}
+
+.section h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: #93e2d5;
+    box-shadow: 5px 5px 7px 5px #A0A0A0;
+}
+
+.item-wrapper {
+    display: flex;
+    width: 22%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: flex-start;
+    
+}
+
+.item-name {
+    font-size: 22px;
+}
+
+.item-price {
+    font-size: 24px;
+}
+
+.item-eng {
+    font-size: 18px;
+}
+
+.banner img {
+    height: 80vh;
+    width: 80vh;
+    margin: auto;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+.banner .imgdiv {
+    height: 80vh;
+    width: 80vh;
+    margin: auto;
+    border-radius: 50%;
+    position: relative;
+}
+
+.banner .imgdiv::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    left: 4%;
+    top: 3%;
+    z-index: 1;
+    border-radius: 50%;
+    animation: glow 2s infinite alternate;
+}
+
+
+
+@keyframes glow {
+    from {
+      box-shadow: 0 10px 50px -50px #8ddcf0;
+    }
+    to {
+      box-shadow: 0 10px 50px 50px #e8f2b8;
+    }
+  }
+  
+
+  .scroll-link {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.6;
+    visibility: hidden;
+  }
+  .mouse {
+    max-width: 2.5rem;
+    width: 100%;
+    height: auto;
+  }
+  
+  @keyframes scroll {
+    0%, 20% {
+    transform: translateY(0) scaleY(1);
+    }
+    10% {
+        opacity: 1;
+        }
+        100% {
+        transform: translateY(36px) scaleY(2);
+        opacity: 0.01;
+        }
+  }
+
+  .scroll {
+    animation-name: scroll;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500);
+    animation-iteration-count: infinite;
+    transform-origin: 50% 20.5px;
+    will-change: transform;
+  }
+
+  header {
+      position: absolute;
+      top: 15px;
+  }
+
+  .wrapper {
+      background: #ccf5ef;
+  }
+
+  .header-link {
+      text-transform: uppercase;
+      padding: 10px 15px;
+  }
+
+  header {
+      padding: 15px 20px;
+  }
+
+  .banner .banner-button {
+    font-size: 22px;
+    text-decoration: none;
+    color: #fdf7b0;
+    font-weight: 700;
+    border: 2px solid #1c777b;
+    padding: 10px;
+    border-radius: 4px;
+    background: #1c777b;
+    box-shadow: 2px 3px rgba(0,0,0,0.1);
+    top: 20px;
+    left: 20px;
+    position: absolute;
+  }
+
+  header a {
+      font-size: 22px;
+      text-decoration: none;
+      color: #fdf7b0;
+      font-weight: 700;
+      border: 2px solid #1c777b;
+      padding: 10px;
+      border-radius: 4px;
+      background: #1c777b;
+      box-shadow: 2px 3px rgba(0,0,0,0.1);
+  }
+
+  footer {
+    padding: 20px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #93e2d5;
+    box-shadow: 5px 5px 7px 5px #A0A0A0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .banner .banner-button {
+        position: relative;
+        left: initial;
+    }
+
+
+    .banner img {
+        height: 50vh;
+        width: 50vh;
+        margin: auto;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+    }
+    .banner .imgdiv {
+        height: 50vh;
+        width: 50vh;
+        margin: auto;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .banner .imgdiv::after {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        left: 4%;
+        top: 3%;
+        z-index: 1;
+        border-radius: 50%;
+        animation: glow 2s infinite alternate;
+    }
+
+    .item-wrapper {
+        flex-basis: 100%;
+    }
+
+  }
+
+
+
+  @media only screen and (max-width: 400px) {
+    .banner .banner-button {
+        position: relative;
+    }
+
+
+    .banner img {
+        height: 35vh;
+        width: 35vh;
+        margin: auto;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+    }
+    .banner .imgdiv {
+        height: 35vh;
+        width: 35vh;
+        margin: auto;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .banner .imgdiv::after {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        left: 4%;
+        top: 3%;
+        z-index: 1;
+        border-radius: 50%;
+        animation: glow 2s infinite alternate;
+    }
+
+  }
